@@ -1,6 +1,6 @@
 print.REdaS_ORs <- function(x, ...){
   
-  if(class(x) != "REdaS_ORs") stop('"x" must be an object of class "REdaS_ORs"', call. = FALSE)
+  if(!inherits(x, "REdaS_ORs")) stop('"x" must be an object of class "REdaS_ORs"', call. = FALSE)
   
   if(all(is.na(unlist(x$ORs)))) stop('no results due to frequencies of 0 in all tables.\n\tsee ?odds_ratios', call. = FALSE)
   

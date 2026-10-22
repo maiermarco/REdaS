@@ -10,7 +10,7 @@ bibentry(
   author  = person(c("Marco", "Johannes"), "Maier"),
   year    = year,
   note    = paste0("{", note, "}"),
-  url     = "http://CRAN.R-project.org/package=REdaS"#,
+  url     = "https://CRAN.R-project.org/package=REdaS"#,
 #
 #  textVersion = paste0("Maier, M. J. (", year, "). Companion Package to the Book 'R: Einführung durch angewandte Statistik'. ", note, ".")
 )

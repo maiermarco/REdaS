@@ -1,9 +1,9 @@
 Package: REdaS
 Type: Package
 Title: Companion Package to the Book 'R: Einführung durch angewandte Statistik'
-Version: 0.9.3
-Date: 2015-11-12
-Authors@R: person(given=c("Marco", "Johannes"), family="Maier", email="marco.maier@wu.ac.at", role=c("cre","aut"))
+Version: 0.9.4
+Date: 2022-06-11
+Authors@R: person(given=c("Marco", "Johannes"), family="Maier", email="marco_maier@posteo.de", role=c("cre","aut"))
 Description: Provides functions used in the 'R: Einführung durch angewandte Statistik' (second edition).
 Depends: R (>= 3.0.0), grid
 Imports: stats

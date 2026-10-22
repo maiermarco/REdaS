@@ -3,7 +3,7 @@ freqCI <- function(x, level = .95){
   this_call <- match.call()
 
   # x to res (working object) with checks
-  if(class(x) == "table"){
+  if(inherits(x, "table")){
     res <- x
     if(length(dim(res)) != 1L) stop('if "x" is a table, it must not have more than one dimension.')
     if(!all((res %% 1) == 0)) warning('"x" is a table and contains non-integer values. Check if this is intended.', call. = FALSE, immediate. = TRUE)

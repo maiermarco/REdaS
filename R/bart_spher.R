@@ -7,10 +7,10 @@ bart_spher <- function(x, use = c("everything", "all.obs", "complete.obs", "na.o
   if(any(is.na(x)) && (use %in% c("everything", "all.obs"))){
     stop(paste0('"x" contains missing values and use = "', use, '"\n  Check your data and set the "use" argument appropriately.'))
   }
-
-  cormat <- tryCatch(cor(x = x, use = use), error = function(e) "error")
   
-  if((cormat == "error") && (use == "complete.obs")) stop('"x" contains missing values and use = "complete.obs" produced an error. Check your data.')
+  cormat <- try(cor(x = x, use = use), silent = TRUE)
+  
+  if(inherits(cormat, "try-error") && (use == "complete.obs")) stop('"x" contains missing values and use = "complete.obs" produced an error. Check your data.')
   
   if(any(is.na(cormat))){
     if(use == "na.or.complete") stop()

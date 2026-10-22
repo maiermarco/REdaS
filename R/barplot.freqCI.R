@@ -1,5 +1,5 @@
 barplot.freqCI <- function(height, percent = TRUE, ...){
-  if(class(height) != "freqCI") stop('"height" must be an object of class "freqCI".')
+  if(!inherits(height, "freqCI")) stop('"height" must be an object of class "freqCI".')
   
   if(percent){
     height$rel_freq <- 100 * height$rel_freq

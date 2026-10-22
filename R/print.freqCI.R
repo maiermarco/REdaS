@@ -1,5 +1,5 @@
 print.freqCI <- function(x, percent = TRUE, digits, ...){
-  if(class(x) != "freqCI") stop('"x" must be an object of class "freqCI".')
+  if(!inherits(x, "freqCI")) stop('"x" must be an object of class "freqCI".')
   if(missing(digits)){
     digits <- ifelse(percent, 2L, 4L)
   } else {
