@@ -1,0 +1,24 @@
+import("stats")
+import("grid")
+importFrom("graphics", "plot", "barplot")
+importFrom("grDevices", "axisTicks", "boxplot.stats", "gray")
+importFrom("utils", "combn", "modifyList")
+
+export("rad2deg")
+export("deg2rad")
+
+export("freqCI")
+  S3method("print", "freqCI")
+  S3method("barplot", "freqCI")
+  
+export("bart_spher")
+  S3method("print", "bart_spher")
+
+export("KMOS")
+  S3method("print", "MSA_KMO")
+  
+export("odds_ratios")
+  S3method("print", "REdaS_ORs")
+  S3method("summary", "REdaS_ORs")
+
+export("densbox")

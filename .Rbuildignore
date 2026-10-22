@@ -1,0 +1,3 @@
+^\.git(hub)?
+^.*\.Rproj$
+^\.Rproj\.user$

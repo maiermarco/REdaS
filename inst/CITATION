@@ -1,0 +1,36 @@
+citHeader('To cite package "REdaS" in publications use:')
+year <- sub("-.*", "", meta$Date)
+note <- sprintf("R package version %s", meta$Version)
+
+bibentry(
+  key     = "REdaS.package",
+  header  = "Package Citation",
+  bibtype = "Manual",
+  title   = "{Companion Package to the Book ``R: Einf\\\"uhrung durch angewandte Statistik''}",
+  author  = person(c("Marco", "Johannes"), "Maier"),
+  year    = year,
+  note    = paste0("{", note, "}"),
+  url     = "http://CRAN.R-project.org/package=REdaS"#,
+#
+#  textVersion = paste0("Maier, M. J. (", year, "). Companion Package to the Book 'R: Einführung durch angewandte Statistik'. ", note, ".")
+)
+
+bibentry(
+  key       = "REdaS.second.ed",
+  header    = "Book Citation",
+  bibtype   = "Book",
+  title     = "{R: Einf\\\"uhrung durch angewandte Statistik}",
+  author    = c(
+    person("Reinhold", "Hatzinger"),
+    person("Kurt", "Hornik"),
+    person("Herbert", "Nagel"),
+    person(c("Marco", "Johannes"), "Maier")
+  ),
+  year      = "{2014}",
+  publisher = "{Pearson Studium}",
+  Address   = "{M\\\"unchen}",
+  Edition   = "{2}",
+  Series    = "{Scientific Tools}",
+
+  textVersion = "Hatzinger, R., Hornik, K., Nagel, H., & Maier, M. J. (2014). R: Einführung durch angewandte Statistik (2nd ed.). München: Pearson Studium."
+)
