@@ -29,6 +29,7 @@ jobs:
       - name: Install macOS system dependencies
         if: ${{ matrix.os == 'macos-latest' }}
         run: |
+          brew install gcc
           sudo Rscript -e "source('https://mac.R-project.org/bin/install.R'); install.libs('gettext')"
           echo "RGL_USE_NULL=true" >> $GITHUB_ENV
       - name: Install dependencies
