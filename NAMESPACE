@@ -1,5 +1,5 @@
-import("stats")
-import("grid")
+importFrom("stats", "cor", "model.frame", "model.response", "na.omit", "pchisq", "pnorm", "printCoefmat", "qnorm", "terms")
+importFrom("grid", "convertUnit", "gpar", "grid.newpage", "grid.points", "grid.polygon", "grid.rect", "grid.segments", "grid.text", "grobHeight", "grobWidth", "popViewport", "pushViewport", "textGrob", "unit", "viewport")
 importFrom("graphics", "plot", "barplot")
 importFrom("grDevices", "axisTicks", "boxplot.stats", "gray")
 importFrom("utils", "combn", "modifyList")
@@ -10,13 +10,13 @@ export("deg2rad")
 export("freqCI")
   S3method("print", "freqCI")
   S3method("barplot", "freqCI")
-  
+
 export("bart_spher")
   S3method("print", "bart_spher")
 
 export("KMOS")
   S3method("print", "MSA_KMO")
-  
+
 export("odds_ratios")
   S3method("print", "REdaS_ORs")
   S3method("summary", "REdaS_ORs")

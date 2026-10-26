@@ -16,7 +16,7 @@ rad2deg(r)}
 and the conversion of radians to degrees is
 \eqn{d=r\cdot{}180/\pi}{d = r · 180 ∕ π}.}
 \author{Marco J. Maier}
-\seealso{see \link[base:Trig]{Trigonometric Functions}, \link[base:Hyperbolic]{Hyperbolic Functions}, \link[base:Constants]{Constants in R}}
+\seealso{see \link[base:Trig]{Trigonometric Functions}, \link[base:Hyperbolic]{Hyperbolic Functions}, \link[base:Constants]{Constants in \R}}
 \examples{# pi is available as a constant
 pi
 

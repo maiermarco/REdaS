@@ -1,13 +1,13 @@
 print.REdaS_ORs <- function(x, ...){
   
-  if(!inherits(x, "REdaS_ORs")) stop('"x" must be an object of class "REdaS_ORs"', call. = FALSE)
+  if(!inherits(x, "REdaS_ORs")) stop("\"x\" must be an object of class \"REdaS_ORs\"", call. = FALSE)
   
-  if(all(is.na(unlist(x$ORs)))) stop('no results due to frequencies of 0 in all tables.\n\tsee ?odds_ratios', call. = FALSE)
+  if(all(is.na(unlist(x$ORs)))) stop("no results due to frequencies of 0 in all tables.\n\tsee ?odds_ratios", call. = FALSE)
   
-  res <- matrix(unlist(x$ORs), ncol=5L, byrow=TRUE)
+  res <- matrix(unlist(x$ORs), ncol = 5L, byrow = TRUE)
   
   dimnames(res) <- list(
-    unlist(lapply(x$comps, function(txt){ paste0(txt[1], " vs. ", txt[2]) })),
+    unlist(lapply(x$comps, function(txt){ paste0(txt[1L], " vs. ", txt[2L]) })),
     c("OR", "log(OR)", "Std. Err.", "z-value", "p-value")
   )
   
@@ -15,6 +15,7 @@ print.REdaS_ORs <- function(x, ...){
   cat("Odds Ratios\n")
   printCoefmat(res, P.values = TRUE, has.Pvalue = TRUE)
   if(interactive()) writeLines("")
-  invisible(res)
   
+  invisible(res)
+
 }

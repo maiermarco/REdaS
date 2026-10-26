@@ -1,12 +1,15 @@
 Package: REdaS
 Type: Package
 Title: Companion Package to the Book 'R: Einführung durch angewandte Statistik'
-Version: 0.9.4
-Date: 2022-06-11
-Authors@R: person(given=c("Marco", "Johannes"), family="Maier", email="marco_maier@posteo.de", role=c("cre","aut"))
+Version: 0.9.5
+Date: 2026-10-26
+Authors@R: person(given = c("Marco", "Johannes"), family = "Maier", email = "marco_maier@posteo.de", role = c("cre", "aut"))
 Description: Provides functions used in the 'R: Einführung durch angewandte Statistik' (second edition).
-Depends: R (>= 3.0.0), grid
-Imports: stats
-Suggests: car, cluster, foreign, GPArotation, MASS, mclust, psych, UsingR, vcd
+Depends: R (>= 4.1.0)
+Imports: graphics, grDevices, grid, stats, utils
+Suggests: car, cluster, foreign, GPArotation, MASS, mclust, psych, UsingR, vcd, testthat (>= 3.0.0)
 License: GPL-2
+URL: https://github.com/maiermarco/REdaS, https://CRAN.R-project.org/package=REdaS
+BugReports: https://github.com/maiermarco/REdaS/issues
 Encoding: UTF-8
+Config/testthat/edition: 3
